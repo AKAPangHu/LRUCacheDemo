@@ -16,20 +16,15 @@ public class Test {
         System.out.println(lruCache.values());
 
 
-        MyLRUCacheNotUse<Integer, String> myLRUCache = new MyLRUCacheNotUse<>(3);
-        myLRUCache.put(1, "a");
-        myLRUCache.put(2, "b");
-        myLRUCache.put(3, "c");
-        myLRUCache.get(1);
-        System.out.println(myLRUCache.put(4, "d"));
-        System.out.println(myLRUCache.keySet());
-        System.out.println(myLRUCache.values());
-        myLRUCache.printDeque();
-
-
-
-
-
+        MyLRUCache myLRUCache = new MyLRUCache(3);
+        myLRUCache.put("a", 1);
+        myLRUCache.put("b", 2);
+        myLRUCache.put("c", 3);
+        myLRUCache.get("a");
+        myLRUCache.put("d", 4);
+        myLRUCache.put("e", 5);
+        myLRUCache.get("a");
+        myLRUCache.printList();
 
     }
 
